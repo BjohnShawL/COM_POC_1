@@ -12,6 +12,7 @@ namespace COM_POC_1.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.title = "City of Mists";
             return View();
         }
 
@@ -38,6 +39,16 @@ namespace COM_POC_1.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [HttpGet("Characters")]
+        public IActionResult CharacterDetails()
+        {
+            return View();
+        }
+        [HttpPost("Characters")]
+        public IActionResult CharacterDetails(Character character)
+        {
+            return View();
         }
     }
 }

@@ -7,7 +7,7 @@ using COM_POC_1.Interfaces;
 
 namespace COM_POC_1.Models
 {
-    public class BuildUp :IFocus
+    public class BuildUp
     {
         public bool Marked { get; set; }
     }

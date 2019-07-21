@@ -1,0 +1,32 @@
+﻿@using Type = COM_POC_1.Models.Type
+@model Character
+
+
+    <form asp-controller="Home" asp-action="CharacterDetails" method="post">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" />
+        <br />
+        <label asp-for="Player">Player</label>
+        <input asp-for="Player" />
+        <br />
+        <label asp-for="Rifts[0].Name">Rift</label>
+        <input asp-for="Rifts[0].Name" />
+        <br />
+        <label asp-for="Themes[0].Type">Theme 1</label>
+        <select asp-for="Themes[0].Type"
+                asp-items="Html.GetEnumSelectList<Type>()"></select>
+        <br />
+        <label asp-for="Themes[1].Type">Name</label>
+        <select asp-for="Themes[1].Type"
+                asp-items="Html.GetEnumSelectList<Type>()"></select>
+        <br />
+        <label asp-for="Themes[2].Type">Name</label>
+        <select asp-for="Themes[2].Type"
+                asp-items="Html.GetEnumSelectList<Type>()"></select>
+        <br />
+        <label asp-for="Themes[3].Type">Name</label>
+        <select asp-for="Themes[3].Type"
+                asp-items="Html.GetEnumSelectList<Type>()"></select>
+        <br />
+        <input type="submit"/>
+    </form>
