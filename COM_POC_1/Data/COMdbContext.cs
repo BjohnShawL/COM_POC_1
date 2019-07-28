@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using COM_POC_1.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace COM_POC_1.Models
@@ -21,6 +22,10 @@ namespace COM_POC_1.Models
         public DbSet<Crack> Cracks { get; set; }
         public DbSet<Fade> Fades { get; set; }
         public DbSet<Attention> Attentions { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Mc> Mcs { get; set; }
+        public DbSet<StoryTag> StoryTags { get; set; }
+        public DbSet<Status> Statuses { get; set; } 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -8,6 +8,7 @@ namespace COM_POC_1.Models
 {
     public class Character
     {
+
         public int CharacterId { get; set; }
         public string Name { get; set; }
         public List<Rift> Rifts { get; set; }

@@ -9,7 +9,7 @@ namespace COM_POC_1.Models
 {
     public class Crack :IFocus
     {
-        
+        public int Id { get; set; }
         public bool Marked { get; set; }
         public Theme Theme { get; set; }
         public int ThemeId { get; set; }

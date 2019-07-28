@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "CoMDbConnectionString": "Server=(localdb)\\ProjectsV13;Database=CityOfMistDb;Integrated Security=true;MultipleActiveResultSets=true"
+  } 
+}
