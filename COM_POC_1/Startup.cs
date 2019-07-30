@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using COM_POC_1.Data.Repositories;
 using COM_POC_1.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +34,7 @@ namespace COM_POC_1
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             services.AddDbContext<CoMdbContext>(cfg => { cfg.UseSqlServer(Configuration.GetConnectionString("CoMDbConnectionString")); });
-
+            services.AddScoped<ICoMRepository,CoMRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

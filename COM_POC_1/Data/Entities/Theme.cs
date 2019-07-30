@@ -11,6 +11,7 @@ namespace COM_POC_1.Models
     {
         public int ThemeId { get; set; }
         public string Name { get; set; }
+        public Archetype Archetype { get; set; }
         public string Description { get; set; }
         public Type Type { get; set; }
         public List<PowerTag> PowerTags { get; set; }
@@ -26,4 +27,23 @@ namespace COM_POC_1.Models
         Mythos,
         Logos
     }
+
+    public enum Archetype
+    {
+        Adaption,
+        Bastion,
+        Divination,
+        Expression,
+        Mobility,
+        Relic,
+        Subversion,
+        DefiningEvent,
+        DefiningRelationship,
+        Mission,
+        Personality,
+        Possessions,
+        Routine,
+        Training
+    }
+
 }

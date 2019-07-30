@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Game>
+
+<div>
+    @foreach (var g in Model)
+    {
+        <p>@g.Name, MC : @g.Mc</p>
+        if (g.Players != null)
+        {
+            foreach (var player in g.Players)
+            {
+                <li>Featuring @player.Name</li>
+            }
+        }
+
+
+    }
+</div>

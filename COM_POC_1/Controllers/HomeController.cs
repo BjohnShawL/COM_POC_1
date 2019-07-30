@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using COM_POC_1.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using COM_POC_1.Models;
 
@@ -10,6 +11,12 @@ namespace COM_POC_1.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ICoMRepository _repository;
+
+        public HomeController(ICoMRepository repository)
+        {
+            _repository = repository;
+        }
         public IActionResult Index()
         {
             ViewBag.title = "City of Mists";
@@ -49,6 +56,12 @@ namespace COM_POC_1.Controllers
         public IActionResult CharacterDetails(Character character)
         {
             return View();
+        }
+
+        public IActionResult Games()
+        {
+            var games = _repository.GetAllGames();
+            return View(games);
         }
     }
 }

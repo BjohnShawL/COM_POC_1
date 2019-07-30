@@ -10,7 +10,7 @@ namespace COM_POC_1.Models
     {
         public int PlayerId { get; set; } 
         public string Name { get; set; }
-        public List<Character> Characters { get; set; } 
+        public ICollection<Character> Characters { get; set; } 
 
     }
 }

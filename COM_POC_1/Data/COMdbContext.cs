@@ -33,6 +33,12 @@ namespace COM_POC_1.Models
                 .Property(t => t.RiftId)
                 .IsRequired(false);
 
+            modelBuilder.Entity<Game>()
+                .HasData(new Game()
+                {
+                    GameId = 0001,
+                    Name = "Dinas Niwl"
+                });
         }
 
     }
